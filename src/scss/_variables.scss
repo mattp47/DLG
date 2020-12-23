@@ -1,0 +1,138 @@
+@import "~@angular/material/theming";
+
+$app-black: (
+  50 : #f7faf7,
+  100 : #f1f4f1,
+  200 : #e8ebe8,
+  300 : #d9dcd9,
+  400 : #b5b8b5,
+  500 : #969896,
+  600 : #6d706d,
+  700 : #5a5c5a,
+  800 : #3b3e3b,
+  900 : #1b1d1b,
+  A100 : #f1f4f2,
+  A200 : #e8ebea,
+  A400 : #b5b8b7,
+  A700 : #5a5c5b,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$app-grey: (
+  50 : #A9A9A9,
+  100 : #f1f4f1,
+  200 : #e8ebe8,
+  300 : #d9dcd9,
+  400 : #b5b8b5,
+  500 : #969896,
+  600 : #6d706d,
+  700 : #5a5c5a,
+  800 : #3b3e3b,
+  900 : #1b1d1b,
+  A100 : #f1f4f2,
+  A200 : #e8ebea,
+  A400 : #b5b8b7,
+  A700 : #5a5c5b,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$primary: mat-palette($app-black, 900);
+$accent:  mat-palette($mat-light-blue, 600, 300, 600);
+
+// The warn palette is optional (defaults to red).
+
+$warn: mat-palette($mat-deep-orange, 300, 500, 800);
+
+$grey: mat-palette($app-grey, 50);
+
+
+@font-face {
+  font-family: OswaldLight;
+  src: url('../assets/fonts/oswald-light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: OswaldRegular;
+  src: url('../assets/fonts/oswald-regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: OswaldBold;
+  src: url('../assets/fonts/oswald-bold.ttf') format("truetype");
+}
+
+$oswald-light: mat-typography-config(
+  $font-family: '"OswaldLight", sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+$oswald-regular: mat-typography-config(
+  $font-family: '"OswaldRegular", sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+$oswald-bold: mat-typography-config(
+  $font-family: '"OswaldBold", sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+.oswald-light {
+  font-size: mat-font-size($oswald-light, headline);
+  font-family: mat-font-family($oswald-light);
+}
+
+.oswald-regular {
+  font-size: mat-font-size($oswald-regular, headline);
+  font-family: mat-font-family($oswald-regular);
+}
+
+.oswald-bold {
+  font-size: mat-font-size($oswald-bold, headline);
+  font-family: mat-font-family($oswald-bold);
+}
+
+
+h1 {
+  font: {
+    family: mat-font-family($oswald-bold, headline);
+   /* size: mat-font-size($oswald-bold, headline);
+    weight: mat-font-weight($oswald-bold, headline); */
+  }
+}

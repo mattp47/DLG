@@ -1,0 +1,29 @@
+$ ng new DLG --style=scss
+
+ng generate component xyz
+
+ng generate service data
+
+
+$ ng add @angular/material
+
+
+
+
+Material expansion panel:
+
+https://stackblitz.com/edit/dynamic-expansion-panel?file=src%2Fapp%2Fapp.component.ts
+
+https://www.freakyjolly.com/angular-material-expansion-panel-accordion-in-angular-project-using-material/#.X-Hs4dj7SUk
+
+https://medium.com/@yunas44/beginner-tutorial-angular-setup-with-sass-angular-material-custom-theme-f6f1d198aa04
+
+https://www.smashingmagazine.com/2020/07/responsive-dashboard-angular-material-ng2-charts-schematics/
+
+https://auth0.com/blog/creating-beautiful-apps-with-angular-material/
+
+https://stackoverflow.com/questions/50070995/angular-material-custom-component-theming
+
+https://stackoverflow.com/questions/43747518/angular-material-and-changing-fonts
+
+https://stackoverflow.com/questions/64115092/set-specific-font-for-bold-text-in-angular-material

@@ -1,0 +1,130 @@
+@import '~@angular/material/theming';
+@import "./variables.scss";
+@include mat-core();
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$theme: mat-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  // typography: $app-typography
+));
+
+@include angular-material-theme($theme);
+
+@mixin accordion-color($theme) {
+  // Extract the color configuration in case a theme has been passed.
+  // This allows consumers to either pass a theme object or a color configuration.
+  $config: mat-get-color-config($theme);
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+
+  // Define any styles affected by the theme.
+  h1 {
+    color: mat-color($primary);
+  }
+
+  .mat-accordion .mat-expansion-panel {
+
+    ::ng-deep mat-expansion-panel-header {
+      color: mat-color($primary);
+      &.mat-expanded {
+        background: mat-color($grey);
+      }
+    }
+
+    ::ng-deep .mat-expansion-panel-body{
+      background: white;
+      padding: 16px 24px 16px 16px !important;
+      .mat-expansion-panel-header-description {
+        color: mat-color($primary);
+      }
+    }
+
+    ::ng-deep .specific-class > .mat-expansion-indicator:after {
+      color: red;
+    }
+  }
+
+  .mat-expansion-panel-spacing {
+    margin: 0;
+  }
+
+}
+
+@mixin accordion-typography($theme) {
+  // Extract the typography configuration in case a theme has been passed.
+  // $config: mat-get-typography-config($theme);
+
+  /* h1 {
+    font: {
+      family: mat-font-family($config, title);
+      size: mat-font-size($config, title);
+      weight: mat-font-weight($config, title);
+    }
+    color: red;
+  } */
+
+  // Custom title that uses all of the typography styles from the `title` level.
+ /* .oswald-light {
+    @include mat-typography-level-to-styles($oswald-light, title);
+  }
+
+  .oswald-regular {
+    @include mat-typography-level-to-styles($oswald-regular, title);
+  } */
+
+  /* .oswald-bold {
+    @include mat-typography-level-to-styles($oswald-bold, title);
+  } */
+
+  /* h1 {
+    font: {
+      family: mat-font-family($oswald-bold, title);
+      size: mat-font-size($oswald-bold, title);
+      weight: mat-font-weight($oswald-bold, title);
+    }
+  } */
+}
+
+@mixin accordion-theme($theme) {
+  // Extracts the color and typography configurations from the theme.
+  $color: mat-get-color-config($theme);
+  $typography: mat-get-typography-config($theme);
+
+  mat-card.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none !important;
+    h1 {
+      padding: 40px 0 30px 0;
+      margin-bottom: 40px;
+      font-size: 4em;
+      border-bottom: 35px solid mat-color($primary);
+      line-height: normal;
+    }
+    mat-expansion-panel {
+      box-shadow: none !important;
+    }
+    .mat-accordion .mat-expansion-panel {
+      border-radius: 0;
+      border-bottom: 3px solid mat-color($primary);
+    }
+  }
+
+
+
+  // Do not generate styles if configurations for individual theming
+  // systems have been explicitly set to `null`.
+  @if $color != null {
+    @include accordion-color($color);
+  }
+  @if $typography != null {
+    @include accordion-typography($typography);
+  }
+}

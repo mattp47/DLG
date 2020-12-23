@@ -1,34 +1,58 @@
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        This is the expansion title
-      </mat-panel-title>
-      <mat-panel-description>
-        This is a summary of the content
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+<mat-card class="container">
 
-    <p>This is the primary content of the panel.</p>
+<h1>HAVE A QUESTION? WE CAN HELP</h1>
 
-    <mat-action-row>
-      <button mat-button>Click me</button>
-    </mat-action-row>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        This is the expansion title
-      </mat-panel-title>
-      <mat-panel-description>
-        This is a summary of the content
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <p>This is the primary content of the panel.</p>
-
-    <mat-action-row>
-      <button mat-button>Click me</button>
-    </mat-action-row>
-  </mat-expansion-panel>
   <mat-accordion>
+
+    <mat-expansion-panel *ngFor="let faq of faqs">
+
+      <mat-expansion-panel-header class="specific-class">
+        {{faq.id}} - {{faq.question}}
+      </mat-expansion-panel-header>
+      <mat-panel-description  class="desc-bg">
+        {{faq.answer}}
+      </mat-panel-description>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+  <!-- <mat-accordion class="example-headers-align" multi>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Personal data
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        Type your name and age
+      </mat-panel-description>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Destination
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        Type your name and age
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Day of the trip
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        Type your name and age
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+
+  </mat-accordion> -->
+
+</mat-card>
