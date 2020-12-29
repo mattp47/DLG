@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 import { DataService } from '../services/data.service';
 import { Faq } from './faq';
 
@@ -13,7 +15,15 @@ export class AccordionComponent implements OnInit {
   // faqs: any = [];
   faqs: Faq[];
 
-  constructor(private dataService: DataService) {
+  constructor(
+    private dataService: DataService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    this.matIconRegistry.addSvgIcon(
+      'plus_icon',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/images/plus-icon.svg')
+    );
   }
 
   ngOnInit(): void {

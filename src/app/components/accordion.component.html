@@ -4,10 +4,11 @@
 
   <mat-accordion>
 
-    <mat-expansion-panel *ngFor="let faq of faqs">
+    <mat-expansion-panel  *ngFor="let faq of faqs; let i = index" #mep="matExpansionPanel" hideToggle>
 
       <mat-expansion-panel-header class="specific-class">
-        {{faq.id}} - {{faq.question}}
+        <span class="qno">Q{{faq.id}}</span>  <span class="qtxt">{{faq.question}}</span>
+        <span class="plus"><i class="{{mep.expanded ? 'open' : 'closed'}}"></i></span>
       </mat-expansion-panel-header>
       <mat-panel-description  class="desc-bg">
         {{faq.answer}}
