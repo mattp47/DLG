@@ -5,10 +5,8 @@ Error: File to import not found or unreadable: ~@angular/material/theming.
 
 1: @import "../../scss/custom";
 2: 
-3: /* h1 {
-4:   color: $primary;
-5: }
-6: 
+3: // Include theme styles for your custom components.
+4: @include accordion-theme($theme);
 
 Backtrace:
 ../../scss/_custom.scss:1
@@ -63,4 +61,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../scss/_custom.scss\A         from line 1 of accordion.component.scss\A \A 1: @import \"../../scss/custom\";\A 2: \A 3: /* h1 {\A 4:   color: $primary;\A 5: }\A 6: "; }
+  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../scss/_custom.scss\A         from line 1 of accordion.component.scss\A \A 1: @import \"../../scss/custom\";\A 2: \A 3: // Include theme styles for your custom components.\A 4: @include accordion-theme($theme);"; }

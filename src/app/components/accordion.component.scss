@@ -1,35 +1,5 @@
 @import "../../scss/custom";
 
-/* h1 {
-  color: $primary;
-}
-
-h2 {
-  color: $accent;
-} */
-// put the rest of your styling
-
-/* $background: map-get($theme, background);
-h1 {
-  background-color: mat-color($background, card);
-  // color: mat-color($mat-green, 700);
-  color: mat-color($app-blue, 50);
-} */
-
-
-// Define your application's custom theme.
-/* $primary: mat-palette($mat-indigo);
-$accent:  mat-palette($mat-pink, A200, A100, A400);
-$theme: mat-light-theme((
-  color: (
-    primary: $primary,
-    accent: $accent,
-  )
-)); */
-
-// Include theme styles for Angular Material components.
-// @include angular-material-theme($theme);
-
 // Include theme styles for your custom components.
 @include accordion-theme($theme);
 
