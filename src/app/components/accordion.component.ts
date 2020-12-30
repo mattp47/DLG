@@ -19,16 +19,16 @@ export class AccordionComponent implements OnInit {
   }
 
   getFaqAccordion(): any {
-    try {
-      this.dataService.getFaqs().subscribe(data => {
-          console.log('data: ', data);
-          this.faqs = data;
-        },
-        error => {
-          console.log('error: ', error);
-        });
-    } catch (e) {
-      console.log(e);
-    }
+    this.dataService.getFaqs().subscribe(data => {
+        console.log('data: ', data);
+        this.faqs = data;
+      },
+      error => {
+        console.log('error: ', error);
+      },
+      () => {
+        console.log('HTTP request completed.');
+      });
   }
+
 }
