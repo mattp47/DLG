@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed, inject} from '@angular/core/testing';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {DataService} from '../services/data.service';
+import {DataService} from '../../services/data.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Observable, of} from 'rxjs';
 

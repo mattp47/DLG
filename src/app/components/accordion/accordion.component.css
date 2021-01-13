@@ -1,15 +1,15 @@
 /*
 Error: File to import not found or unreadable: ~@angular/material/theming.
-        on line 1 of ../../scss/_custom.scss
+        on line 1 of ../../../scss/_custom.scss
         from line 1 of accordion.component.scss
 
-1: @import "../../scss/custom";
+1: @import "../../../scss/custom";
 2: 
 3: // Include theme styles for your custom components.
 4: @include accordion-theme($theme);
 
 Backtrace:
-../../scss/_custom.scss:1
+../../../scss/_custom.scss:1
 accordion.component.scss:1
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
@@ -61,4 +61,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../scss/_custom.scss\A         from line 1 of accordion.component.scss\A \A 1: @import \"../../scss/custom\";\A 2: \A 3: // Include theme styles for your custom components.\A 4: @include accordion-theme($theme);"; }
+  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../../scss/_custom.scss\A         from line 1 of accordion.component.scss\A \A 1: @import \"../../../scss/custom\";\A 2: \A 3: // Include theme styles for your custom components.\A 4: @include accordion-theme($theme);"; }
