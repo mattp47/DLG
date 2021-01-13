@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {Faq} from '../../models/faq';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-accordion',
