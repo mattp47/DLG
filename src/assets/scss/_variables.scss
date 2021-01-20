@@ -1,4 +1,4 @@
-@import "~@angular/material/theming";
+@import "../../../node_modules/@angular/material/theming";
 
 $app-black: (
   50 : #f7faf7,
@@ -114,17 +114,17 @@ $yellow: mat-palette($app-yellow, 50);
 
 @font-face {
   font-family: OswaldLight;
-  src: url('../assets/fonts/oswald-light.ttf') format("truetype");
+  src: url('../fonts/oswald-light.ttf') format("truetype");
 }
 
 @font-face {
   font-family: OswaldRegular;
-  src: url('../assets/fonts/oswald-regular.ttf') format("truetype");
+  src: url('../fonts/oswald-regular.ttf') format("truetype");
 }
 
 @font-face {
   font-family: OswaldBold;
-  src: url('../assets/fonts/oswald-bold.ttf') format("truetype");
+  src: url('../fonts/oswald-bold.ttf') format("truetype");
 }
 
 $oswald-light: mat-typography-config(

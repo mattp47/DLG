@@ -582,4 +582,63 @@ textarea.cdk-textarea-autosize-measuring-firefox {
 .mat-mdc-focus-indicator {
   position: relative; }
 
-/*# sourceMappingURL=styles.css.map */
+mat-card.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none !important; }
+  mat-card.container h1 {
+    padding: 40px 0 30px 0;
+    margin-bottom: 40px;
+    font-size: 4em;
+    border-bottom: 35px solid #1b1d1b;
+    line-height: normal;
+    font-family: "OswaldBold", sans-serif;
+    color: #1b1d1b; }
+  mat-card.container .mat-accordion .mat-expansion-panel {
+    border-radius: 0;
+    border-bottom: 3px solid #1b1d1b;
+    box-shadow: none !important; }
+    mat-card.container .mat-accordion .mat-expansion-panel ::ng-deep mat-expansion-panel-header {
+      color: #1b1d1b;
+      height: 64px; }
+      mat-card.container .mat-accordion .mat-expansion-panel ::ng-deep mat-expansion-panel-header.mat-expanded {
+        background: darkgray; }
+    mat-card.container .mat-accordion .mat-expansion-panel ::ng-deep .mat-expansion-panel-body {
+      background: white;
+      padding: 16px 24px 16px 16px !important;
+      font-size: 18px;
+      font-family: "OswaldRegular", sans-serif;
+      line-height: 1.5; }
+      mat-card.container .mat-accordion .mat-expansion-panel ::ng-deep .mat-expansion-panel-body .mat-expansion-panel-header-description {
+        color: #1b1d1b; }
+    mat-card.container .mat-accordion .mat-expansion-panel span.qtxt {
+      font-size: 18px;
+      font-family: "OswaldRegular", sans-serif;
+      padding: 15px 25px 15px 50px; }
+    mat-card.container .mat-accordion .mat-expansion-panel span.qno {
+      font-size: 36px;
+      font-family: "OswaldBold", sans-serif;
+      padding-top: 5px; }
+    mat-card.container .mat-accordion .mat-expansion-panel span.plus {
+      background: #fed230;
+      right: 12px;
+      top: 12px;
+      position: absolute;
+      display: block; }
+      mat-card.container .mat-accordion .mat-expansion-panel span.plus i {
+        background: url("../images/plus-icon.svg") no-repeat center center;
+        background-size: 24px 24px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all 0.3s; }
+        mat-card.container .mat-accordion .mat-expansion-panel span.plus i.closed {
+          transform: rotate(0deg); }
+        mat-card.container .mat-accordion .mat-expansion-panel span.plus i.open {
+          transform: rotate(45deg); }
+
+.mat-expansion-panel-spacing {
+  margin: 0; }
+
+/*# sourceMappingURL=accordion.component.css.map */

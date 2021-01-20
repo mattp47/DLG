@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {DataService} from '../../services/data.service';
-import {Faq} from '../../models/faq';
+import {AccordionService} from './shared/accordion.service';
+import {Faq} from './shared/faq';
 
 @Component({
   selector: 'app-accordion',
@@ -10,7 +10,7 @@ import {Faq} from '../../models/faq';
 export class AccordionComponent implements OnInit {
   faqs: Faq[];
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: AccordionService) {
   }
 
   public ngOnInit(): void {

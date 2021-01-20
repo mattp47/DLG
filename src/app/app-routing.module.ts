@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'accordion',
-    loadChildren: () => import('./components/accordion/accordion.module').then(m => m.AccordionModule)
+    loadChildren: () => import('./accordion/accordion.module').then(m => m.AccordionModule)
   }
 ];
 

@@ -1,5 +1,5 @@
-@import '~@angular/material/theming';
-@import "./variables.scss";
+@import '../../../node_modules/@angular/material/theming';
+@import "variables";
 
 @include mat-core();
 
@@ -75,7 +75,7 @@ $theme: mat-light-theme((
         display: block;
 
         i {
-          background: url("../assets/images/plus-icon.svg") no-repeat center center;
+          background: url("../images/plus-icon.svg") no-repeat center center;
           background-size: 24px 24px;
           padding: 20px;
           display: inline-block;

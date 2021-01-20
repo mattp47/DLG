@@ -1,15 +1,15 @@
 import {TestBed} from '@angular/core/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {DataService} from './data.service';
+import {AccordionService} from './accordion.service';
 
 describe('DataService', () => {
-  let service: DataService;
+  let service: AccordionService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule]
     });
-    service = TestBed.inject(DataService);
+    service = TestBed.inject(AccordionService);
   });
 
   it('should be created', () => {

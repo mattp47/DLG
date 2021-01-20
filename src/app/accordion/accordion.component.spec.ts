@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed, inject} from '@angular/core/testing';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {DataService} from '../../services/data.service';
+import {AccordionService} from './shared/accordion.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Observable, of} from 'rxjs';
 
@@ -34,7 +34,7 @@ describe('AccordionComponent', () => {
         BrowserAnimationsModule
       ],
       providers: [
-        {provide: DataService, useValue: mockApiService}
+        {provide: AccordionService, useValue: mockApiService}
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
@@ -57,12 +57,12 @@ describe('AccordionComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('HAVE A QUESTION? WE CAN HELP');
   });
 
-  it('should get service', inject([DataService], (service: DataService) => {
+  it('should get service', inject([AccordionService], (service: AccordionService) => {
     expect(service).toBeTruthy();
   }));
 
   it('should use faqs from the service', () => {
-    const dataService = fixture.debugElement.injector.get(DataService);
+    const dataService = fixture.debugElement.injector.get(AccordionService);
     dataService.getFaqs().subscribe(data => {
       expect(data).toEqual([{
         id: '1',

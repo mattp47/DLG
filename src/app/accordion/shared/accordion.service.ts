@@ -2,13 +2,13 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
-import {Faq} from '../models/faq';
+import {Faq} from './faq';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class DataService {
+export class AccordionService {
 
   url = '../../assets/data/faqs.json';
 
