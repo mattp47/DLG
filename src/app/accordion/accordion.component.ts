@@ -10,7 +10,7 @@ import {Faq} from './shared/faq';
 export class AccordionComponent implements OnInit {
   faqs: Faq[];
 
-  constructor(private dataService: AccordionService) {
+  constructor(private accordionService: AccordionService) {
   }
 
   public ngOnInit(): void {
@@ -18,7 +18,7 @@ export class AccordionComponent implements OnInit {
   }
 
   public getFaqAccordion(): any {
-    this.dataService.getFaqs().subscribe(data => {
+    this.accordionService.getFaqs().subscribe(data => {
       this.faqs = data;
     });
   }

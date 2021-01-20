@@ -10,13 +10,13 @@ import {Faq} from './faq';
 
 export class AccordionService {
 
-  url = '../../assets/data/faqs.json';
+  apiUrl = '../../assets/data/faqs.json';
 
   constructor(private http: HttpClient) {
   }
 
   public getFaqs(): Observable<Faq[]> {
-    return this.http.get<Faq[]>(this.url).pipe(
+    return this.http.get<Faq[]>(this.apiUrl).pipe(
       catchError(this.handleError)
     );
   }
